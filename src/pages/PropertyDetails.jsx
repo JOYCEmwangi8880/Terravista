@@ -56,6 +56,14 @@ const PropertyDetails = () => {
       cost: 5000,
       status: 'Completed'
     },
+     {
+      id: '3',
+      date: '2024-03-15',
+      issue: 'Plumbing repair',
+      unit: 'A1',
+      cost: 5000,
+      status: 'Completed'
+    },
     // Add more records...
   ];
 
