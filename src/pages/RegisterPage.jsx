@@ -78,7 +78,7 @@ const RegisterPage = () => {
                   onChange={handleChange}
                   required
                   className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white"
-                  placeholder="John"
+                  placeholder="first name"
                 />
               </div>
               <div>
@@ -95,7 +95,7 @@ const RegisterPage = () => {
                   onChange={handleChange}
                   required
                   className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white"
-                  placeholder="Doe"
+                  placeholder="last time"
                 />
               </div>
               <div>
@@ -113,7 +113,7 @@ const RegisterPage = () => {
                   onChange={handleChange}
                   required
                   className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white"
-                  placeholder="name@company.com"
+                  placeholder="name@gmail.com"
                 />
               </div>
               <div>
