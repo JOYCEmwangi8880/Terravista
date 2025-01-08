@@ -152,7 +152,7 @@ const RegisterPage = () => {
                   placeholder="••••••••"
                 />
                 {!passwordMatch && (
-                  <p className="text-sm text-red-500">Passwords do not match</p>
+                  <p className="text-sm text-red-500">Passwords don't match</p>
                 )}
               </div>
               <div>
