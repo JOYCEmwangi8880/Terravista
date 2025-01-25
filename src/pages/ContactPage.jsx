@@ -7,6 +7,12 @@ const ContactPage = () => {
       <p className="mb-4">
             Want to reach out? Email, call, or fill out the form on the side
           </p>
+          <p className="mb-2">
+            <strong>Phone:</strong> +254 745913429
+          </p>
+          <p className="mb-8">
+            <strong>Email:</strong> joyce04mwangi@gmail.com
+          </p>
     </div>
   )
 }
