@@ -29,7 +29,7 @@ const ContactPage = () => {
             <div>
               <h3 className="font-semibold">Feedback and suggestions</h3>
               <p className="text-sm">
-                Your feedback helps us improve! Share your thoughts and suggestions.
+                Your feedback helps us improve better! Share your thoughts and suggestions.
               </p>
             </div>
           </div>
