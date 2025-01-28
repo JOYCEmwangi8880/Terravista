@@ -33,6 +33,14 @@ const ContactPage = () => {
               </p>
             </div>
           </div>
+
+          <div className="bg-black text-white p-8 rounded-lg shadow-lg">
+          <h2 className="text-xl font-bold mb-4">Get in touch</h2>
+          <p className="mb-4">
+            Let us know how we can help you and we’ll get in touch as soon as possible.
+          </p>
+
+          </div>
           
     </div>
   )
