@@ -39,6 +39,21 @@ const ContactPage = () => {
           <p className="mb-4">
             Let us know how we can help you and we’ll get in touch as soon as possible.
           </p>
+          <form className="space-y-4">
+          <div className="flex gap-4">
+              <input type="text" placeholder="First Name" className="w-1/2 p-2 bg-black border border-gray-600 rounded" />
+              <input type="text" placeholder="Last Name" className="w-1/2 p-2 bg-black border border-gray-600 rounded" />
+            </div>
+            <input type="email" placeholder="Email" className="w-full p-2 bg-black border border-gray-600 rounded" />
+            <div className="flex gap-4">
+              <select className="w-1/4 p-2 bg-black border border-gray-600 rounded">
+                <option value="+254">+254</option>
+              </select>
+              <input type="tel" placeholder="712 345678" className="w-3/4 p-2 bg-black border border-gray-600 rounded" />
+            </div>
+            <textarea placeholder="Message" rows="4" className="w-full p-2 bg-black border border-gray-600 rounded"></textarea>
+            <button type="submit" className="w-full bg-gray-800 py-2 rounded text-white hover:bg-blue-700">Send message</button>
+          </form>
 
           </div>
           
