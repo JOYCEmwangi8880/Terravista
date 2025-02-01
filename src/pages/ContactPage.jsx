@@ -54,6 +54,9 @@ const ContactPage = () => {
             <textarea placeholder="Message" rows="4" className="w-full p-2 bg-black border border-gray-600 rounded"></textarea>
             <button type="submit" className="w-full bg-gray-800 py-2 rounded text-white hover:bg-blue-700">Send message</button>
           </form>
+          <p className="text-xs text-gray-500 mt-4">
+            By submitting this form, you agree to our <a href="#" className="underline">Privacy Policy</a> and <a href="#" className="underline">Terms of Service</a>.
+          </p>
 
           </div>
           
