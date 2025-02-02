@@ -58,6 +58,28 @@ const ContactPage = () => {
             By submitting this form, you agree to our <a href="#" className="underline">Privacy Policy</a> and <a href="#" className="underline">Terms of Service</a>.
           </p>
 
+          <div className="bg-black text-white py-16">
+        <div className="container mx-auto px-8 grid grid-cols-1 md:grid-cols-2 gap-8">
+          <div>
+            <h2 className="text-3xl font-bold mb-4">Our Location</h2>
+            <p className="text-lg">
+              Headquarters <br />
+               Nairobi.
+            </p>
+          </div>
+          <div className="map-container">
+            <iframe
+              src=""
+              width="100%"
+              height="300"
+              allowFullScreen=""
+              loading="lazy"
+              className="rounded-lg"
+            ></iframe>
+          </div>
+        </div>
+      </div>
+
           </div>
           
     </div>
