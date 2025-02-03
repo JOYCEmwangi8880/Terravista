@@ -63,8 +63,8 @@ const ContactPage = () => {
           <div>
             <h2 className="text-3xl font-bold mb-4">Our Location</h2>
             <p className="text-lg">
-              Headquarters <br />
-               Nairobi.
+              Nairobi, <br />
+               Kenya
             </p>
           </div>
           <div className="map-container">
