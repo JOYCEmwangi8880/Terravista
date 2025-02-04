@@ -47,7 +47,7 @@ const ContactPage = () => {
             <input type="email" placeholder="Email" className="w-full p-2 bg-black border border-gray-600 rounded" />
             <div className="flex gap-4">
               <select className="w-1/4 p-2 bg-black border border-gray-600 rounded">
-                <option value="+254">+254 ---</option>
+                <option value="+254">+254 7---</option>
               </select>
               <input type="tel" placeholder="712 345678" className="w-3/4 p-2 bg-black border border-gray-600 rounded" />
             </div>
