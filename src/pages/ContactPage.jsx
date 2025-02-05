@@ -79,6 +79,15 @@ const ContactPage = () => {
           </div>
         </div>
       </div>
+      <div className="bg-gradient-to-r from-black via-gray-800 to-black text-white py-16">
+        <div className="container mx-auto text-center">
+          <h2 className="text-4xl font-bold mb-4">Ready to upskill with us?</h2>
+          <div className="flex justify-center space-x-4">
+            <button className="bg-white text-black py-2 px-6 rounded hover:bg-gray-200">Get started</button>
+            <button className="border border-white text-white py-2 px-6 rounded hover:bg-white hover:text-black">Learn more</button>
+          </div>
+        </div>
+      </div>
 
           </div>
           
