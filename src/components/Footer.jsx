@@ -69,7 +69,7 @@ import {
                     href="tel:+254115767696"
                     className="text-muted-foreground hover:text-foreground transition-colors duration-200"
                   >
-                    + (254) 115-767-696
+                    + (254) 45913429
                   </a>
                 </li>
                 <li className="flex items-center">
