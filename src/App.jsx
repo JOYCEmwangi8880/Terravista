@@ -5,6 +5,8 @@ import RegisterPage from './pages/RegisterPage';
 import LoginPage from './pages/LoginPage';
 import Header from './components/Navbar';
 import ContactPage from './pages/ContactPage';
+import  Footer  from './components/Footer';
+import AboutPage from './pages/AboutPage';
 
 function App() {
   return (
@@ -15,7 +17,9 @@ function App() {
         <Route path="/register" element={<RegisterPage />} />
         <Route path="/login" element={<LoginPage />} />
         <Route path='/contact' element={<ContactPage />} />
+        <Route path='/about' element={<AboutPage />} />
       </Routes>
+      <Footer />
     </BrowserRouter>
   );
 }
