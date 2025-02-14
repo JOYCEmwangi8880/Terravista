@@ -8,7 +8,7 @@ const AboutPage = () => {
         <div 
           className="absolute inset-0 bg-cover bg-center"
           style={{ 
-            backgroundImage: "url('/assets/building-management.jpg')", 
+            backgroundImage: "url(`../public/assets/rehoboth.jpg')", 
             backgroundPosition: "center",
           }}
         >
