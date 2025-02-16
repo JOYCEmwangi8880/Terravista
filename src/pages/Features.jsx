@@ -137,7 +137,7 @@ const Features = () => {
                 <div className="flex items-center space-x-3">
                   <FaClipboardList className="text-green-500" />
                   <div>
-                    <h3 className="font-semibold">Tenant Management</h3>
+                    <h3 className="font-semibold">Tenant's Management</h3>
                     <p className="text-sm text-gray-500">Add and manage tenants</p>
                   </div>
                 </div>
