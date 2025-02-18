@@ -80,7 +80,7 @@ const Features = () => {
         <div className="relative z-10 h-full flex flex-col justify-center items-center text-white px-4">
           <h1 className="text-4xl font-bold mb-4">Powerful Features for Property Management</h1>
           <p className="text-xl text-center max-w-3xl">
-            Everything you need to manage your rental properties efficiently
+            Everything you need to manage your rental properties efficiently and smoothly
           </p>
         </div>
       </div>
