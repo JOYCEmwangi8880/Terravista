@@ -1,29 +1,91 @@
 import React from 'react';
-import { FaHome } from "react-icons/fa";
-import { Link } from "react-router-dom"
+import { Link, useNavigate, useLocation } from 'react-router-dom';
+import { Menu, Dropdown } from 'antd';
+import { DownOutlined } from '@ant-design/icons';
 
 const Navbar = () => {
+  const navigate = useNavigate();
+  const location = useLocation();
+
+  // Check if we're on a dashboard page
+  const isDashboardPage = location.pathname.includes('dashboard');
+
+  const handleDashboardClick = (path) => {
+    // Check if user is logged in (you'll need to implement your auth check)
+    const isLoggedIn = localStorage.getItem('user'); // or however you track auth
+    if (!isLoggedIn) {
+      navigate('/login');
+    } else {
+      navigate(path);
+    }
+  };
+
+  const menu = (
+    <Menu>
+      <Menu.Item key="1" onClick={() => handleDashboardClick('/agent-dashboard')}>
+        Agent Dashboard
+      </Menu.Item>
+      <Menu.Item key="2" onClick={() => handleDashboardClick('/landlord-dashboard')}>
+        Landlord Dashboard
+      </Menu.Item>
+    </Menu>
+  );
+
   return (
-    <nav className="absolute top-0 left-0 w-full z-20 bg-transparent">
-      <div className="flex justify-between items-center px-10 py-4">
-        <div className="w-1/2 mt-4 flex items-center">
-          <FaHome size={90} className="text-blue-500" />
-          <h1 className="text-white text-3xl font-bold ml-4">
-            Terra<span className="text-blue-400">Vista</span>
-          </h1>
-        </div>
-        <div className="flex justify-center items-center space-x-16">
-          <Link to ="/" className="text-white hover:text-blue-400 transition">Home </Link>
-          <Link to ="/features" className="text-white hover:text-blue-400 transition">Features</Link>
-          <Link to ="/about" className="text-white hover:text-blue-400 transition">About Us</Link>
+    <nav className={`p-4 fixed w-full top-0 z-50 ${
+      isDashboardPage ? 'bg-white shadow-md' : 'bg-transparent'
+    }`}>
+      <div className="container mx-auto flex justify-between items-center">
+        <div className="flex items-center">
+          <Link to="/" className="flex items-center">
+            <img src="../assets/logo.jpg" alt="Logo" className="h-8 w-8" />
+            <span className={`ml-2 text-xl ${
+              isDashboardPage ? 'text-gray-800' : 'text-white'
+            }`}>
+              Terra<span className="text-blue-500">Vista</span>
+            </span>
+          </Link>
         </div>
 
-        <div className="flex space-x-4">
-          <Link to="/register">
-          <button className="px-4 py-2 text-white border border-blue-400 rounded-md hover:bg-blue-400 transition">Register</button>
+        <div className="flex items-center space-x-6">
+          <Link 
+            to="/" 
+            className={`hover:text-blue-500 ${
+              isDashboardPage ? 'text-gray-700' : 'text-white'
+            }`}
+          >
+            Home
           </Link>
-          <Link to="/login ">
-          <button className="px-4 py-2 text-white bg-blue-400 rounded-md hover:bg-blue-500 transition">Login</button>
+          <Dropdown overlay={menu}>
+            <span className={`cursor-pointer hover:text-blue-500 ${
+              isDashboardPage ? 'text-gray-700' : 'text-white'
+            }`}>
+              Features <DownOutlined className="ml-1" />
+            </span>
+          </Dropdown>
+          <Link 
+            to="/about" 
+            className={`hover:text-blue-500 ${
+              isDashboardPage ? 'text-gray-700' : 'text-white'
+            }`}
+          >
+            About Us
+          </Link>
+          <Link 
+            to="/register" 
+            className={`px-4 py-2 rounded border hover:text-blue-500 ${
+              isDashboardPage 
+                ? 'text-gray-700 border-gray-700' 
+                : 'text-white border-white'
+            }`}
+          >
+            Register
+          </Link>
+          <Link 
+            to="/login" 
+            className="bg-blue-500 text-white px-4 py-2 rounded hover:bg-blue-600"
+          >
+            Login
           </Link>
         </div>
       </div>

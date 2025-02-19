@@ -8,7 +8,9 @@ import Contact from './pages/Contact';
 import  Footer  from './components/Footer';
 import About from './pages/About';
 import Features from './pages/Features';
-
+import AgentDashboard from './pages/AgentDashboard';
+import LandlordDashboard from './pages/LandlordDashboard';
+import AddTenant from './pages/AddTenant';
 function App() {
   return (
     <BrowserRouter>
@@ -20,7 +22,9 @@ function App() {
         <Route path='/contact' element={<Contact />} />
         <Route path='/about' element={<About />} />
         <Route path="/features" element={<Features />} />
-
+        <Route path="/agent-dashboard" element={<AgentDashboard />} />
+        <Route path="/landlord-dashboard" element={<LandlordDashboard />} />
+        <Route path="/add-tenant" element={<AddTenant />} />
 
       </Routes>
       <Footer />
