@@ -190,7 +190,7 @@ const AddTenant = () => {
 
           {/* Submit Button */}
           <Form.Item>
-            <Button type="primary" htmlType="submit" className="w-full bg-blue-500 hover:bg-blue-600">
+            <Button type="primary" htmlType="submit" className="w-fit px-4 py-2 bg-green-700 hover:bg-green-600 rounded ml-auto flex">
               Add Tenant
             </Button>
           </Form.Item>
