@@ -14,6 +14,7 @@ const TenantInfo = () => {
     houseNo: "A4",
     houseType: "2BHK",
     rentAmount: 25000,
+    waterBill: 260,
     rentStatus: {
       isPaid: true,
       balance: 0,
@@ -30,6 +31,7 @@ const TenantInfo = () => {
     idNumber: "12345678",
     address: "123 Mombasa Road, Nairobi"
   };
+  
 
   return (
     <div className="p-6 max-w-4xl mx-auto">
