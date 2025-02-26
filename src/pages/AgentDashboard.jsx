@@ -12,7 +12,7 @@ const AgentDashboard = () => {
     { 
       id: '1',
       name: 'Amelia Kimani', 
-      type: '2BHK', 
+      type: '2BH', 
       date: '23 May 2020', 
       avatar: 'https://xsgames.co/randomusers/avatar.php?g=female',
       houseNo: 'A4',
@@ -23,7 +23,7 @@ const AgentDashboard = () => {
     { 
       id: '2',
       name: 'James Makau', 
-      type: '1BHK', 
+      type: '1BH', 
       date: '2 May 2020', 
       avatar: 'https://xsgames.co/randomusers/avatar.php?g=male',
       houseNo: 'B2',
@@ -34,7 +34,7 @@ const AgentDashboard = () => {
     { 
       id: '3',
       name: 'Gladys Wanjiru', 
-      type: '2BHK', 
+      type: '2BH', 
       date: '23 Mar 2019', 
       avatar: 'https://xsgames.co/randomusers/avatar.php?g=female',
       houseNo: 'A7',
@@ -55,6 +55,17 @@ const AgentDashboard = () => {
     },
     { 
       id: '5',
+      name: 'Maggi Kimani', 
+      type: '3BHK', 
+      date: '6 May 2020', 
+      avatar: 'https://xsgames.co/randomusers/avatar.php?g=female',
+      houseNo: 'B5',
+      rentAmount: 35000,
+      rentStatus: { isPaid: true, balance: 0 },
+      phoneNumber: '+254 756 789 012'
+    },
+    { 
+      id: '6',
       name: 'Maggi Kimani', 
       type: '3BHK', 
       date: '6 May 2020', 
