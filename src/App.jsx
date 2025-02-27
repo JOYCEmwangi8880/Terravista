@@ -12,6 +12,8 @@ import AgentDashboard from './pages/AgentDashboard';
 import LandlordDashboard from './pages/LandlordDashboard';
 import AddTenant from './pages/AddTenant';
 import TenantInfo from './pages/TenantInfo';
+import MyTenants from './pages/MyTenants';
+
 function App() {
   return (
     <BrowserRouter>
@@ -27,6 +29,7 @@ function App() {
         <Route path="/landlord-dashboard" element={<LandlordDashboard />} />
         <Route path="/add-tenant" element={<AddTenant />} />
         <Route path="/tenant-info/:id" element={<TenantInfo />} />
+        <Route path="/my-tenants" element={<MyTenants />} />
       </Routes>
       <Footer />
     </BrowserRouter>
