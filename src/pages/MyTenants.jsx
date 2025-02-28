@@ -4,7 +4,7 @@ import { SearchOutlined, UserOutlined } from '@ant-design/icons';
 import { Link } from 'react-router-dom';
 
 const MyTenants = () => {
-  // Mock data for tenants
+  
   const tenants = [
     {
       id: '1',
@@ -99,6 +99,16 @@ const MyTenants = () => {
     {
       id: '10',
       name: 'David Mwangi',
+      avatar: 'https://xsgames.co/randomusers/avatar.php?g=male',
+      houseNo: 'H2',
+      houseType: '4BHK',
+      moveInDate: '12 Oct 2020',
+      rentStatus: 'Paid',
+      phoneNumber: '+254 701 234 567',
+    },
+    {
+      id: '11',
+      name: 'Joyce Mwangi',
       avatar: 'https://xsgames.co/randomusers/avatar.php?g=male',
       houseNo: 'H2',
       houseType: '4BHK',
