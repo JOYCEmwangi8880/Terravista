@@ -6,7 +6,7 @@ import { useParams, Link } from 'react-router-dom';
 const TenantInfo = () => {
   const { id } = useParams();
 
-  // Mock tenant data (in a real app, you'd fetch this based on the id)
+  
   const tenantData = {
     id: '1',
     name: "Amelia Kimani",
@@ -70,7 +70,7 @@ const TenantInfo = () => {
             <Card title="House Information" className="h-full">
               <div className="space-y-4">
                 <div className="flex items-center justify-between">
-                  <span className="text-gray-500">House Number:</span>
+                  <span className="text-gray-500">House No:</span>
                   <span className="font-semibold">{tenantData.houseNo}</span>
                 </div>
                 <div className="flex items-center justify-between">

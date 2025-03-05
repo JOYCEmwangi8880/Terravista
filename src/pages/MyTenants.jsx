@@ -106,36 +106,7 @@ const MyTenants = () => {
       rentStatus: 'Paid',
       phoneNumber: '+254 701 234 567',
     },
-    {
-      id: '11',
-      name: 'Joyce Mwangi',
-      avatar: 'https://xsgames.co/randomusers/avatar.php?g=male',
-      houseNo: 'H2',
-      houseType: '4BHK',
-      moveInDate: '12 Oct 2020',
-      rentStatus: 'Paid',
-      phoneNumber: '+254 701 234 567',
-    },
-    {
-      id: '12',
-      name: 'Joy nyambura',
-      avatar: 'https://xsgames.co/randomusers/avatar.php?g=male',
-      houseNo: 'H2',
-      houseType: '4BHK',
-      moveInDate: '12 Oct 2020',
-      rentStatus: 'Paid',
-      phoneNumber: '+254 701 234 567',
-    },
-    {
-      id: '13',
-      name: 'Joy nyambura',
-      avatar: 'https://xsgames.co/randomusers/avatar.php?g=male',
-      houseNo: 'H2',
-      houseType: '4BHK',
-      moveInDate: '12 Oct 2020',
-      rentStatus: 'Paid',
-      phoneNumber: '+254 701 234 567',
-    }
+    
   ];
 
   const columns = [
