@@ -13,6 +13,10 @@ import LandlordDashboard from './pages/LandlordDashboard';
 import AddTenant from './pages/AddTenant';
 import TenantInfo from './pages/TenantInfo';
 import MyTenants from './pages/MyTenants';
+import PropertyDetails from './pages/PropertyDetails';
+import FinancialReport from './pages/FinancialReport';
+import Documents from './pages/Documents';
+import Settings from './pages/Settings';
 
 function App() {
   return (
@@ -30,6 +34,10 @@ function App() {
         <Route path="/add-tenant" element={<AddTenant />} />
         <Route path="/tenant-info/:id" element={<TenantInfo />} />
         <Route path="/my-tenants" element={<MyTenants />} />
+        <Route path="/property-details/:id" element={<PropertyDetails />} />
+        <Route path="/financial-report" element={<FinancialReport />} />
+        <Route path="/documents" element={<Documents />} />
+        <Route path="/settings" element={<Settings />} />
       </Routes>
       <Footer />
     </BrowserRouter>
