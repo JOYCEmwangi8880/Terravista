@@ -26,6 +26,15 @@ const FinancialReports = () => {
       amount: -5000,
       status: 'Paid'
     },
+    {
+      id: '3',
+      date: '2024-03-02',
+      property: 'Sunrise Heights',
+      unit: 'B2',
+      type: 'Maintenance',
+      amount: -5000,
+      status: 'Paid'
+    },
     // Add more transactions...
   ];
 
