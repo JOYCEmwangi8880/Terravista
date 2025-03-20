@@ -25,6 +25,16 @@ const PropertyDetails = () => {
       lastPayment: null,
       dueDate: null
     },
+    {
+      id: '3',
+      unitNo: 'A2',
+      type: '1BHK',
+      tenant: null,
+      rentAmount: 15000,
+      status: 'Vacant',
+      lastPayment: null,
+      dueDate: null
+    },
     // Add more units...
   ];
 
@@ -32,6 +42,14 @@ const PropertyDetails = () => {
   const maintenanceRecords = [
     {
       id: '1',
+      date: '2024-03-15',
+      issue: 'Plumbing repair',
+      unit: 'A1',
+      cost: 5000,
+      status: 'Completed'
+    },
+    {
+      id: '2',
       date: '2024-03-15',
       issue: 'Plumbing repair',
       unit: 'A1',
