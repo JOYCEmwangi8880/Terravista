@@ -144,6 +144,14 @@ const AgentDashboard = () => {
       tenants: 12,
       rent: 'KES 15,000',
       daysLeft: 5
+    },
+    {
+      name: '4BHK Apartment',
+      image: 'https://images.unsplash.com/photo-1576941089067-2de3c901e126',
+      ending: '23 Mar 2019',
+      tenants: 12,
+      rent: 'KES 15,000',
+      daysLeft: 5
     }
   ];
 
