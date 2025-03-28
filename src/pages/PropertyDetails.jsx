@@ -35,6 +35,16 @@ const PropertyDetails = () => {
       lastPayment: null,
       dueDate: null
     },
+    {
+      id: '4',
+      unitNo: 'A2',
+      type: '1BHK',
+      tenant: null,
+      rentAmount: 15000,
+      status: 'Vacant',
+      lastPayment: null,
+      dueDate: null
+    },
     // Add more units...
   ];
 
