@@ -51,7 +51,7 @@ const LandlordDashboard = () => {
     },
     {
       id: '4',
-      name: 'Blue Waters Estate',
+      name: 'sarit Estate',
       location: 'Westlands, Nairobi',
       units: 25,
       occupiedUnits: 22,
