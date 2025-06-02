@@ -25,7 +25,7 @@ const LandlordDashboard = () => {
       totalRent: 450000,
       collectedRent: 380000,
       image: 'https://images.unsplash.com/photo-1568605114967-8130f3a36994',
-      agent: 'John Doe'
+      agent: 'Joyce Mwangi'
     },
     {
       id: '2',
@@ -52,7 +52,7 @@ const LandlordDashboard = () => {
     {
       id: '4',
       name: 'sarit Estate',
-      location: 'Westlands, Nairobi',
+      location: 'Eastern Bypass, Nairobi',
       units: 25,
       occupiedUnits: 22,
       totalRent: 625000,
@@ -63,7 +63,7 @@ const LandlordDashboard = () => {
     {
       id: '5',
       name: 'Blue Waters Estate',
-      location: 'Lavington, Nairobi',
+      location: 'Northern Bypass, Nairobi',
       units: 25,
       occupiedUnits: 22,
       totalRent: 625000,
