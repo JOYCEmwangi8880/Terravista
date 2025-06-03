@@ -8,7 +8,7 @@ const AddTenant = () => {
   const [form] = Form.useForm();
 
   const propertyTypes = [
-    { value: 'singleroom', label: 'singleroom' },
+    { value: 'studioroom', label: 'studioroom' },
     { value: 'bedsitter', label: 'Bedsitter' },
     { value: 'onebedroom', label: 'One Bedroom' },
     { value: 'twobedroom', label: 'Two Bedroom' },
