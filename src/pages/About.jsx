@@ -17,7 +17,7 @@ const AboutPage = () => {
         <div className="relative z-10 h-full flex flex-col justify-center items-center text-white px-4">
           <h1 className="text-5xl font-bold mb-4">About TerraVista</h1>
           <p className="text-xl text-center max-w-3xl">
-            Streamlining property management for landlords, caretakers, and tenants
+            Streamlining property management for landlords, agents, caretakers and tenants
           </p>
         </div>
       </div>
