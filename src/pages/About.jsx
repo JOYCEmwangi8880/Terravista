@@ -29,7 +29,7 @@ const AboutPage = () => {
           <h2 className="text-3xl font-bold mb-6">Our Mission</h2>
           <p className="text-lg text-gray-600 max-w-3xl mx-auto">
             To simplify rental property management by providing a comprehensive platform 
-            that connects landlords, caretakers, and tenants while streamlining rent 
+            that connects landlords, caretakers, and tenants while streamlining bills 
             collection and property maintenance.
           </p>
         </div>
