@@ -177,7 +177,7 @@ const AgentDashboard = () => {
     {
       user: 'Joyce Mwangi',
       action: 'rent has paid the rent',
-      time: '7m',
+      time: '8m',
       avatar: 'https://xsgames.co/randomusers/avatar.php?g=male'
     }
   ];
