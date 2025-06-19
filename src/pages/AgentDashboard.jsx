@@ -156,7 +156,7 @@ const AgentDashboard = () => {
 
   const activities = [
     {
-      user: 'Eric Nduku',
+      user: 'Fridah Nyagah'
       action: 'rent has paid the rent',
       time: '2m',
       avatar: 'https://xsgames.co/randomusers/avatar.php?g=male'
