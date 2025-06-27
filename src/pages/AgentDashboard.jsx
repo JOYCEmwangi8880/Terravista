@@ -168,7 +168,7 @@ const AgentDashboard = () => {
       avatar: 'https://xsgames.co/randomusers/avatar.php?g=female'
     },
     {
-      user: 'James Makau',
+      user: 'James Mwangi',
       action: 'rent has paid the rent',
       time: '7m',
       avatar: 'https://xsgames.co/randomusers/avatar.php?g=male'
