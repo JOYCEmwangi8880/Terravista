@@ -7,37 +7,41 @@ const Navbar = () => {
   const navigate = useNavigate();
   const location = useLocation();
   const isDashboardPage = location.pathname.includes('dashboard');
-  const isLoggedIn = localStorage.getItem('user'); // Your auth check
+  
+  // Check if user is logged in (replace with your actual auth check)
+  const isLoggedIn = localStorage.getItem('authToken');
 
   const handleDashboardClick = (path) => {
     if (isLoggedIn) {
-      navigate(path);
+      navigate(path); // Go directly to dashboard if logged in
+    } else {
+      navigate('/login', { 
+        state: { 
+          redirectTo: path,
+          message: `Please login to access the ${path.includes('agent') ? 'Agent' : 'Landlord'} Dashboard`
+        }
+      });
     }
-    // If not logged in, the menu will show login/register options
   };
 
-  // Modified menu structure
-  const menu = isLoggedIn ? (
+  // Original menu structure remains unchanged
+  const menu = (
     <Menu>
-      <Menu.Item key="1" onClick={() => handleDashboardClick('/agent-dashboard')}>
+      <Menu.Item 
+        key="agent" 
+        onClick={() => handleDashboardClick('/agent-dashboard')}
+      >
         Agent Dashboard
       </Menu.Item>
-      <Menu.Item key="2" onClick={() => handleDashboardClick('/landlord-dashboard')}>
+      <Menu.Item 
+        key="landlord" 
+        onClick={() => handleDashboardClick('/landlord-dashboard')}
+      >
         Landlord Dashboard
-      </Menu.Item>
-    </Menu>
-  ) : (
-    <Menu>
-      <Menu.Item key="3" onClick={() => navigate('/login')}>
-        Login to Access Dashboard
-      </Menu.Item>
-      <Menu.Item key="4" onClick={() => navigate('/register')}>
-        Register for an Account
       </Menu.Item>
     </Menu>
   );
 
-  // Rest of your original code remains exactly the same
   return (
     <nav className={`p-4 fixed w-full top-0 z-50 ${
       isDashboardPage ? 'bg-white shadow-md' : 'bg-transparent'
@@ -45,8 +49,12 @@ const Navbar = () => {
       <div className="container mx-auto flex justify-between items-center">
         <div className="flex items-center">
           <Link to="/" className="flex items-center">
-            <img src="../assets/logo.jpg" alt="Logo" className="h-8 w-8" />
-            <span className={`ml-2 text-xl ${
+            <img 
+              src="../assets/logo.jpg" 
+              alt="Logo" 
+              className="h-8 w-8 rounded-full object-cover"
+            />
+            <span className={`ml-2 text-xl font-semibold ${
               isDashboardPage ? 'text-gray-800' : 'text-white'
             }`}>
               Terra<span className="text-blue-500">Vista</span>
@@ -63,6 +71,7 @@ const Navbar = () => {
           >
             Home
           </Link>
+          
           <Dropdown overlay={menu}>
             <span className={`cursor-pointer hover:text-blue-500 ${
               isDashboardPage ? 'text-gray-700' : 'text-white'
@@ -70,6 +79,7 @@ const Navbar = () => {
               Features <DownOutlined className="ml-1" />
             </span>
           </Dropdown>
+          
           <Link 
             to="/about" 
             className={`hover:text-blue-500 ${
@@ -78,22 +88,37 @@ const Navbar = () => {
           >
             About Us
           </Link>
-          <Link 
-            to="/register" 
-            className={`px-4 py-2 rounded border hover:text-blue-500 ${
-              isDashboardPage 
-                ? 'text-gray-700 border-gray-700' 
-                : 'text-white border-white'
-            }`}
-          >
-            Register
-          </Link>
-          <Link 
-            to="/login" 
-            className="bg-blue-500 text-white px-4 py-2 rounded hover:bg-blue-600"
-          >
-            Login
-          </Link>
+          
+          {!isLoggedIn ? (
+            <>
+              <Link 
+                to="/register" 
+                className={`px-4 py-2 rounded border ${
+                  isDashboardPage 
+                    ? 'text-gray-700 border-gray-700 hover:bg-gray-100' 
+                    : 'text-white border-white hover:bg-white hover:bg-opacity-10'
+                }`}
+              >
+                Register
+              </Link>
+              <Link 
+                to="/login" 
+                className="bg-blue-500 text-white px-4 py-2 rounded hover:bg-blue-600"
+              >
+                Login
+              </Link>
+            </>
+          ) : (
+            <button
+              onClick={() => {
+                localStorage.removeItem('authToken');
+                navigate('/');
+              }}
+              className="text-red-500 hover:text-red-700 px-4 py-2 rounded border border-red-500 hover:border-red-700"
+            >
+              Logout
+            </button>
+          )}
         </div>
       </div>
     </nav>
