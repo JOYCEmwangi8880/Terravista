@@ -13,12 +13,13 @@ const Navbar = () => {
 
   const handleDashboardClick = (path) => {
     if (isLoggedIn) {
-      navigate(path); // Go directly to dashboard if logged in
+      navigate(path); // Go directly to dashboard
     } else {
       navigate('/login', { 
         state: { 
           redirectTo: path,
-          message: `Please login to access the ${path.includes('agent') ? 'Agent' : 'Landlord'} Dashboard`
+          dashboardType: path.includes('agent') ? 'Agent' : 'Landlord',
+          showRegisterPrompt: true // Flag to show register option on login page
         }
       });
     }
