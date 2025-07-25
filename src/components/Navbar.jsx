@@ -1,7 +1,7 @@
 import React from 'react';
 import { Link, useNavigate, useLocation } from 'react-router-dom';
 import { Menu, Dropdown } from 'antd';
-import { DownOutlined } from '@ant-design/icons';
+import { DownOutlined, UserOutlined } from '@ant-design/icons';
 
 const Navbar = () => {
   const navigate = useNavigate();
@@ -25,8 +25,13 @@ const Navbar = () => {
     }
   };
 
-  // Original menu structure remains unchanged
-  const menu = (
+  const handleLogout = () => {
+    localStorage.removeItem('authToken');
+    navigate('/');
+  };
+
+  // Dashboard selection dropdown menu
+  const dashboardMenu = (
     <Menu>
       <Menu.Item 
         key="agent" 
@@ -73,14 +78,6 @@ const Navbar = () => {
             Home
           </Link>
           
-          <Dropdown overlay={menu}>
-            <span className={`cursor-pointer hover:text-blue-500 ${
-              isDashboardPage ? 'text-gray-700' : 'text-white'
-            }`}>
-              Features <DownOutlined className="ml-1" />
-            </span>
-          </Dropdown>
-          
           <Link 
             to="/about" 
             className={`hover:text-blue-500 ${
@@ -108,13 +105,21 @@ const Navbar = () => {
               >
                 Login
               </Link>
+              
+              <Dropdown overlay={dashboardMenu} placement="bottomRight">
+                <div className={`flex items-center cursor-pointer px-3 py-2 rounded-full border ${
+                  isDashboardPage 
+                    ? 'text-gray-700 border-gray-300 hover:bg-gray-50' 
+                    : 'text-white border-white border-opacity-50 hover:bg-white hover:bg-opacity-10'
+                }`}>
+                  <UserOutlined className="text-lg" />
+                  <DownOutlined className="ml-2 text-xs" />
+                </div>
+              </Dropdown>
             </>
           ) : (
             <button
-              onClick={() => {
-                localStorage.removeItem('authToken');
-                navigate('/');
-              }}
+              onClick={handleLogout}
               className="text-red-500 hover:text-red-700 px-4 py-2 rounded border border-red-500 hover:border-red-700"
             >
               Logout
