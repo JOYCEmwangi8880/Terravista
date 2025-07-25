@@ -6,21 +6,18 @@ import { DownOutlined } from '@ant-design/icons';
 const Navbar = () => {
   const navigate = useNavigate();
   const location = useLocation();
-
-  // Check if we're on a dashboard page
   const isDashboardPage = location.pathname.includes('dashboard');
+  const isLoggedIn = localStorage.getItem('user'); // Your auth check
 
   const handleDashboardClick = (path) => {
-    // Check if user is logged in (you'll need to implement your auth check)
-    const isLoggedIn = localStorage.getItem('user'); // or however you track auth
-    if (!isLoggedIn) {
-      navigate('/login');
-    } else {
+    if (isLoggedIn) {
       navigate(path);
     }
+    // If not logged in, the menu will show login/register options
   };
 
-  const menu = (
+  // Modified menu structure
+  const menu = isLoggedIn ? (
     <Menu>
       <Menu.Item key="1" onClick={() => handleDashboardClick('/agent-dashboard')}>
         Agent Dashboard
@@ -29,8 +26,18 @@ const Navbar = () => {
         Landlord Dashboard
       </Menu.Item>
     </Menu>
+  ) : (
+    <Menu>
+      <Menu.Item key="3" onClick={() => navigate('/login')}>
+        Login to Access Dashboard
+      </Menu.Item>
+      <Menu.Item key="4" onClick={() => navigate('/register')}>
+        Register for an Account
+      </Menu.Item>
+    </Menu>
   );
 
+  // Rest of your original code remains exactly the same
   return (
     <nav className={`p-4 fixed w-full top-0 z-50 ${
       isDashboardPage ? 'bg-white shadow-md' : 'bg-transparent'
