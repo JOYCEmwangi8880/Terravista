@@ -156,25 +156,25 @@ const AgentDashboard = () => {
 
   const activities = [
     {
-      user: 'Fridah Nyagah'
+      user: 'Fridah Nyagah',
       action: 'rent has paid the rent',
       time: '2m',
       avatar: 'https://xsgames.co/randomusers/avatar.php?g=male'
     },
     {
-      user: 'Gladys Wanjiru',
+      user: 'ruiru njoroge',
       action: 'rent has paid the rent',
       time: '4m',
       avatar: 'https://xsgames.co/randomusers/avatar.php?g=female'
     },
     {
-      user: 'James Makau',
+      user: 'James Mwangi',
       action: 'rent has paid the rent',
       time: '7m',
       avatar: 'https://xsgames.co/randomusers/avatar.php?g=male'
     },
     {
-      user: 'Joyce Mwangi',
+      user: 'Joyce Wangui',
       action: 'rent has paid the rent',
       time: '8m',
       avatar: 'https://xsgames.co/randomusers/avatar.php?g=male'
