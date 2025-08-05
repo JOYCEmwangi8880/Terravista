@@ -89,7 +89,7 @@ const Login = () => {
                     to={registerPath}
                     className="font-medium text-primary-600 hover:underline dark:text-primary-500"
                   >
-                    Sign up
+                    Sign up Here
                   </Link>
                 </p>
               </form>
