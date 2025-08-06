@@ -411,7 +411,7 @@ const AgentDashboard = () => {
             <div className="mt-4 flex items-center justify-between">
               <div className="flex items-center">
                 <Avatar src="https://xsgames.co/randomusers/avatar.php?g=male" />
-                <span className="ml-2">Eric Nduku</span>
+                <span className="ml-2">Joyce Mwangi</span>
               </div>
               <span className="text-gray-500">Say Congratulations</span>
             </div>
