@@ -8,18 +8,18 @@ const Navbar = () => {
   const location = useLocation();
   const isDashboardPage = location.pathname.includes('dashboard');
   
-  // Check if user is logged in (replace with your actual auth check)
+  
   const isLoggedIn = localStorage.getItem('authToken');
 
   const handleDashboardClick = (path) => {
     if (isLoggedIn) {
-      navigate(path); // Go directly to dashboard
+      navigate(path); 
     } else {
       navigate('/login', { 
         state: { 
           redirectTo: path,
           dashboardType: path.includes('agent') ? 'Agent' : 'Landlord',
-          showRegisterPrompt: true // Flag to show register option on login page
+          showRegisterPrompt: true 
         }
       });
     }
@@ -30,7 +30,7 @@ const Navbar = () => {
     navigate('/');
   };
 
-  // Dashboard selection dropdown menu
+ 
   const dashboardMenu = (
     <Menu>
       <Menu.Item 
