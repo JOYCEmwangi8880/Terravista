@@ -413,7 +413,7 @@ const AgentDashboard = () => {
                 <Avatar src="https://xsgames.co/randomusers/avatar.php?g=male" />
                 <span className="ml-2">Joyce Mwangi</span>
               </div>
-              <span className="text-gray-500">Say Congratulations</span>
+              <span className="text-gray-500">Say Congratulations!</span>
             </div>
           </Card>
         </div>
