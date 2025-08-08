@@ -71,15 +71,7 @@ const AddTenant = () => {
             </Form.Item>
           </div>
 
-          {/* Date of Birth */}
-          <Form.Item
-            name="dateOfBirth"
-            label="Date of Birth"
-            required
-            rules={[{ required: true, message: 'Please select date of birth' }]}
-          >
-            <DatePicker className="w-full" />
-          </Form.Item>
+          
 
           {/* Contact Information */}
           <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
@@ -101,28 +93,6 @@ const AddTenant = () => {
             </Form.Item>
           </div>
 
-          {/* ID and Photo Upload */}
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-            <Form.Item
-              name="idNumber"
-              label="ID Number"
-              required
-              rules={[{ required: true, message: 'Please enter ID number' }]}
-            >
-              <Input placeholder="National ID Number" />
-            </Form.Item>
-
-            <Form.Item
-              name="photo"
-              label="Photo"
-              required
-              rules={[{ required: true, message: 'Please upload a photo' }]}
-            >
-              <Upload maxCount={1}>
-                <Button icon={<UploadOutlined />}>Upload Photo</Button>
-              </Upload>
-            </Form.Item>
-          </div>
 
           {/* House Details */}
           <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
@@ -135,29 +105,10 @@ const AddTenant = () => {
               <Input placeholder="House Number" />
             </Form.Item>
 
-            <Form.Item
-              name="houseType"
-              label="House Type"
-              required
-              rules={[{ required: true, message: 'Please select house type' }]}
-            >
-              <Select placeholder="Select House Type">
-                {propertyTypes.map(type => (
-                  <Option key={type.value} value={type.value}>{type.label}</Option>
-                ))}
-              </Select>
-            </Form.Item>
+           
           </div>
 
-          {/* Rent Amount */}
-          <Form.Item
-            name="rentAmount"
-            label="Monthly Rent (KES)"
-            required
-            rules={[{ required: true, message: 'Please enter rent amount' }]}
-          >
-            <Input type="number" placeholder="Amount in KES" />
-          </Form.Item>
+       
 
           {/* Emergency Contact */}
           <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
@@ -180,15 +131,7 @@ const AddTenant = () => {
             </Form.Item>
           </div>
 
-          {/* Permanent Address */}
-          <Form.Item
-            name="address"
-            label="Permanent Address"
-            required
-            rules={[{ required: true, message: 'Please enter permanent address' }]}
-          >
-            <Input.TextArea rows={4} placeholder="Enter full address" />
-          </Form.Item>
+          
 
           {/* Submit Button */}
           <Form.Item>
