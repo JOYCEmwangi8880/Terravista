@@ -49,28 +49,7 @@ const LandlordDashboard = () => {
       image: 'https://images.unsplash.com/photo-1576941089067-2de3c901e126',
       agent: 'Mike Johnson'
     },
-    {
-      id: '4',
-      name: 'sarit Estate',
-      location: 'Eastern Bypass, Nairobi',
-      units: 25,
-      occupiedUnits: 22,
-      totalRent: 625000,
-      collectedRent: 550000,
-      image: 'https://images.unsplash.com/photo-1576941089067-2de3c901e126',
-      agent: 'Mike Johnson'
-    },
-    {
-      id: '5',
-      name: 'Blue Waters Estate',
-      location: 'Northern Bypass, Nairobi',
-      units: 25,
-      occupiedUnits: 22,
-      totalRent: 625000,
-      collectedRent: 550000,
-      image: 'https://images.unsplash.com/photo-1576941089067-2de3c901e126',
-      agent: 'Mike Johnson'
-    }
+   
   ];
 
   // Mock data for recent activities
