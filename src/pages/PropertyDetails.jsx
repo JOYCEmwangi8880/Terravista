@@ -45,7 +45,7 @@ const PropertyDetails = () => {
       lastPayment: null,
       dueDate: null
     },
-    // Add more units...
+  
   ];
 
   // Mock data for maintenance records
@@ -74,7 +74,7 @@ const PropertyDetails = () => {
       cost: 5000,
       status: 'Completed'
     },
-    // Add more records...
+   
   ];
 
   const columns = [
