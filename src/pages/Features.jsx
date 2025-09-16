@@ -8,7 +8,7 @@ const Features = () => {
           Our Features
         </h1>
         <p className="mt-4 text-xl text-gray-500">
-          Streamline your business operations with TerraVista
+          Simplify and optimize your rental management with TerraVista
         </p>
       </div>
 
@@ -18,7 +18,7 @@ const Features = () => {
           <div className="px-4 py-5 sm:p-6">
             <h3 className="text-lg font-medium text-gray-900">Property Management</h3>
             <p className="mt-2 text-sm text-gray-500">
-              Efficiently manage your properties and tenants in one place
+              Keep all your properties and tenant information organized in one central platform.
             </p>
           </div>
         </div>
@@ -27,7 +27,7 @@ const Features = () => {
           <div className="px-4 py-5 sm:p-6">
             <h3 className="text-lg font-medium text-gray-900">Rent Collection</h3>
             <p className="mt-2 text-sm text-gray-500">
-              Automated rent collection and payment tracking
+              Automate rent collection and monitor payments with ease.
             </p>
           </div>
         </div>
@@ -36,7 +36,7 @@ const Features = () => {
           <div className="px-4 py-5 sm:p-6">
             <h3 className="text-lg font-medium text-gray-900">Maintenance Requests</h3>
             <p className="mt-2 text-sm text-gray-500">
-              Handle maintenance requests and track their progress
+              Receive, manage, and track maintenance requests from start to finish.
             </p>
           </div>
         </div>
