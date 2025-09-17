@@ -3,12 +3,12 @@ import React from 'react'
 const ContactPage = () => {
   return (
     <div>
-      <h2 className="text-3xl font-bold mb-4">Contact us</h2>
+      <h2 className="text-2xl font-bold mb-4">Contact Us</h2>
       <p className="mb-4">
-            Want to reach out? Email, call,text  or fill out the form on the side
+            Want to reach out? Email, call,text or fill out the form on the side
           </p>
           <p className="mb-2">
-            <strong>Phone:</strong> +254 745913429
+            <strong>Phone:</strong> +254745913429
           </p>
           <p className="mb-8">
             <strong>Email:</strong> joyce04mwangi@gmail.com
@@ -84,7 +84,7 @@ const ContactPage = () => {
           <h2 className="text-4xl font-bold mb-4">Ready to upskill with us?</h2>
           <div className="flex justify-center space-x-4">
             <button className="bg-white text-black py-2 px-6 rounded hover:bg-gray-200">Get started</button>
-            <button className="border border-white text-white py-2 px-6 rounded hover:bg-white hover:text-black">Learn more</button>
+            <button className="border border-white text-white py-2 px-6 rounded hover:bg-white hover:text-black">Learn more...</button>
           </div>
         </div>
       </div>

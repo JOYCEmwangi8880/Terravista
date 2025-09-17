@@ -57,8 +57,8 @@ const Settings = () => {
             <div>
               <label className="block text-sm font-medium mb-1">Role</label>
               <select className="w-full border rounded-lg p-2">
-                <option>Tenant</option>
                 <option>Landlord</option>
+                <option>Agent</option>
                 <option>Admin</option>
               </select>
             </div>
@@ -74,9 +74,9 @@ const Settings = () => {
           <h2 className="text-lg font-medium mb-4">Security</h2>
           <div className="space-y-4">
             {/* Last login (static for now) */}
-            <p className="text-sm text-gray-600">
+            {/* <p className="text-sm text-gray-600">
               Last login: <span className="font-medium">Aug 24, 2025 - 9:45 AM</span>
-            </p>
+            </p> */}
 
             {/* Change password */}
             <button className="bg-gray-200 px-4 py-2 rounded-lg hover:bg-gray-300 w-full text-left">
@@ -84,9 +84,9 @@ const Settings = () => {
             </button>
 
             {/* Two-Factor placeholder */}
-            <button className="bg-gray-200 px-4 py-2 rounded-lg hover:bg-gray-300 w-full text-left">
+            {/* <button className="bg-gray-200 px-4 py-2 rounded-lg hover:bg-gray-300 w-full text-left">
               Enable Two-Factor Authentication
-            </button>
+            </button> */}
           </div>
 
           {/* Logout */}
