@@ -8,7 +8,7 @@ const AboutPage = () => {
         <div 
           className="absolute inset-0 bg-cover bg-center"
           style={{ 
-            backgroundImage: "url(`../public/assets/rehoboth.jpg')", 
+            backgroundImage: "url('/assets/rehoboth.jpg')", 
             backgroundPosition: "center",
           }}
         >
@@ -17,7 +17,7 @@ const AboutPage = () => {
         <div className="relative z-10 h-full flex flex-col justify-center items-center text-white px-4">
           <h1 className="text-5xl font-bold mb-4">About TerraVista</h1>
           <p className="text-xl text-center max-w-3xl">
-            Streamlining property management for landlords, agents, caretakers and tenants
+            Making property management simpler for landlords, agents, caretakers, and tenants.
           </p>
         </div>
       </div>
@@ -28,9 +28,9 @@ const AboutPage = () => {
         <div className="mb-16 text-center">
           <h2 className="text-3xl font-bold mb-6">Our Mission</h2>
           <p className="text-lg text-gray-600 max-w-3xl mx-auto">
-            To simplify rental property management by providing a comprehensive platform 
-            that connects landlords, caretakers, and tenants while streamlining bills 
-            collection and property maintenance.
+            Our goal is to transform rental management by offering an all-in-one platform 
+            that connects landlords, caretakers, and tenants—while simplifying payments, 
+            communication, and property upkeep.
           </p>
         </div>
 
@@ -39,30 +39,30 @@ const AboutPage = () => {
           <div className="bg-white p-6 rounded-lg shadow-md">
             <h3 className="text-xl font-semibold mb-4">For Landlords</h3>
             <ul className="space-y-2 text-gray-600">
-              <li>• Real-time rent collection tracking</li>
-              <li>• Property performance analytics</li>
-              <li>• Tenant payment history</li>
-              <li>• Direct communication with caretakers</li>
+              <li>• Track rent payments in real-time</li>
+              <li>• Access detailed property performance insights</li>
+              <li>• Review tenant payment history instantly</li>
+              <li>• Communicate directly with caretakers</li>
             </ul>
           </div>
 
           <div className="bg-white p-6 rounded-lg shadow-md">
             <h3 className="text-xl font-semibold mb-4">For Caretakers</h3>
             <ul className="space-y-2 text-gray-600">
-              <li>• Easy tenant management</li>
-              <li>• Streamlined rent collection</li>
-              <li>• Maintenance request tracking</li>
-              <li>• Automated payment reminders</li>
+              <li>• Manage tenants with ease</li>
+              <li>• Simplify rent collection and reporting</li>
+              <li>• Track and resolve maintenance requests</li>
+              <li>• Send automated payment reminders</li>
             </ul>
           </div>
 
           <div className="bg-white p-6 rounded-lg shadow-md">
             <h3 className="text-xl font-semibold mb-4">For Tenants</h3>
             <ul className="space-y-2 text-gray-600">
-              <li>• Simple rent payment process</li>
-              <li>• Payment history access</li>
-              <li>• Maintenance request submission</li>
-              <li>• Direct communication channel</li>
+              <li>• Pay rent quickly and securely</li>
+              <li>• View full payment history anytime</li>
+              <li>• Submit and follow up on maintenance requests</li>
+              <li>• Stay connected with caretakers and landlords</li>
             </ul>
           </div>
         </div>
@@ -78,9 +78,9 @@ const AboutPage = () => {
                 </svg>
               </div>
               <div>
-                <h3 className="text-xl font-semibold mb-2">Efficient Management</h3>
+                <h3 className="text-xl font-semibold mb-2">Smarter Management</h3>
                 <p className="text-gray-600">
-                  Streamline your rental property operations with our comprehensive management tools.
+                  Organize and optimize rental operations with tools designed for efficiency and growth.
                 </p>
               </div>
             </div>
@@ -92,9 +92,9 @@ const AboutPage = () => {
                 </svg>
               </div>
               <div>
-                <h3 className="text-xl font-semibold mb-2">Secure Platform</h3>
+                <h3 className="text-xl font-semibold mb-2">Secure & Reliable</h3>
                 <p className="text-gray-600">
-                  Your data is protected with industry-standard security measures.
+                  We protect your information with trusted, industry-standard security practices.
                 </p>
               </div>
             </div>
