@@ -3,131 +3,46 @@ import { Card, Row, Col, Button, Table, Tag, Progress, Tabs, List, Avatar } from
 import { HomeOutlined, UserOutlined, DollarOutlined, ToolOutlined } from '@ant-design/icons';
 
 const PropertyDetails = () => {
-  // Mock data for units
+  // --- Mock Data ---
   const units = [
-    {
-      id: '1',
-      unitNo: 'A1',
-      type: '2BHK',
-      tenant: 'John Kamau',
-      rentAmount: 25000,
-      status: 'Occupied',
-      lastPayment: '2024-03-01',
-      dueDate: '2024-04-01'
-    },
-    {
-      id: '2',
-      unitNo: 'A2',
-      type: '1BHK',
-      tenant: null,
-      rentAmount: 15000,
-      status: 'Vacant',
-      lastPayment: null,
-      dueDate: null
-    },
-    {
-      id: '3',
-      unitNo: 'A2',
-      type: '1BHK',
-      tenant: null,
-      rentAmount: 15000,
-      status: 'Vacant',
-      lastPayment: null,
-      dueDate: null
-    },
-    {
-      id: '4',
-      unitNo: 'A2',
-      type: '1BHK',
-      tenant: null,
-      rentAmount: 15000,
-      status: 'Vacant',
-      lastPayment: null,
-      dueDate: null
-    },
-  
+    { id: '1', unitNo: 'A1', type: '2BHK', tenant: 'John Kamau', rentAmount: 25000, status: 'Occupied', lastPayment: '2024-03-01', dueDate: '2024-04-01' },
+    { id: '2', unitNo: 'A2', type: '1BHK', tenant: null, rentAmount: 15000, status: 'Vacant', lastPayment: null, dueDate: null },
+    { id: '3', unitNo: 'A3', type: '1BHK', tenant: null, rentAmount: 15000, status: 'Vacant', lastPayment: null, dueDate: null },
+    { id: '4', unitNo: 'B1', type: 'Studio', tenant: null, rentAmount: 10000, status: 'Vacant', lastPayment: null, dueDate: null },
   ];
 
-  // Mock data for maintenance records
   const maintenanceRecords = [
-    {
-      id: '1',
-      date: '2024-03-15',
-      issue: 'Plumbing repair',
-      unit: 'A1',
-      cost: 5000,
-      status: 'Completed'
-    },
-    {
-      id: '2',
-      date: '2024-03-15',
-      issue: 'Plumbing repair',
-      unit: 'A1',
-      cost: 5000,
-      status: 'Completed'
-    },
-     {
-      id: '3',
-      date: '2024-03-15',
-      issue: 'Plumbing repair',
-      unit: 'A1',
-      cost: 5000,
-      status: 'Completed'
-    },
-   
+    { id: '1', date: '2024-03-15', issue: 'Plumbing repair', unit: 'A1', cost: 5000, status: 'Completed' },
+    { id: '2', date: '2024-03-20', issue: 'Electrical wiring', unit: 'A2', cost: 3000, status: 'Pending' },
+    { id: '3', date: '2024-03-25', issue: 'Painting', unit: 'B1', cost: 7000, status: 'In Progress' },
   ];
 
+  // --- Table Columns ---
   const columns = [
-    {
-      title: 'Unit No',
-      dataIndex: 'unitNo',
-      key: 'unitNo',
+    { title: 'Unit No', dataIndex: 'unitNo', key: 'unitNo' },
+    { title: 'Type', dataIndex: 'type', key: 'type' },
+    { title: 'Tenant', dataIndex: 'tenant', key: 'tenant', render: (tenant) => tenant || 'Vacant' },
+    { title: 'Rent Amount', dataIndex: 'rentAmount', key: 'rentAmount', render: (amt) => `KES ${amt.toLocaleString()}` },
+    { 
+      title: 'Status', dataIndex: 'status', key: 'status',
+      render: (status) => <Tag color={status === 'Occupied' ? 'green' : status === 'Vacant' ? 'red' : 'orange'}>{status}</Tag> 
     },
-    {
-      title: 'Type',
-      dataIndex: 'type',
-      key: 'type',
-    },
-    {
-      title: 'Tenant',
-      dataIndex: 'tenant',
-      key: 'tenant',
-      render: (tenant) => tenant || 'Vacant'
-    },
-    {
-      title: 'Rent Amount',
-      dataIndex: 'rentAmount',
-      key: 'rentAmount',
-      render: (amount) => `KES ${amount.toLocaleString()}`
-    },
-    {
-      title: 'Status',
-      dataIndex: 'status',
-      key: 'status',
-      render: (status) => (
-        <Tag color={status === 'Occupied' ? 'green' : 'red'}>
-          {status}
-        </Tag>
-      )
-    },
-    {
-      title: 'Actions',
-      key: 'actions',
-      render: (_, record) => (
-        <Button type="link">View Details</Button>
-      )
-    }
+    { title: 'Actions', key: 'actions', render: () => <Button type="link">View Details</Button> },
   ];
 
+  // --- Dashboard Summary ---
+  const summaryStats = [
+    { title: 'Total Units', value: 20, icon: <HomeOutlined className="text-3xl text-blue-500 mb-2" /> },
+    { title: 'Occupancy', value: <Progress type="circle" percent={90} width={80} />, icon: <UserOutlined className="text-3xl text-green-500 mb-2" /> },
+    { title: 'Revenue', value: `KES 450,000`, icon: <DollarOutlined className="text-3xl text-yellow-500 mb-2" /> },
+    { title: 'Maintenance', value: '3 Pending', icon: <ToolOutlined className="text-3xl text-red-500 mb-2" /> },
+  ];
+
+  // --- Tabs Content ---
   const items = [
-    {
-      key: '1',
-      label: 'Units',
-      children: <Table columns={columns} dataSource={units} />
-    },
-    {
-      key: '2',
-      label: 'Maintenance',
+    { key: '1', label: 'Units', children: <Table columns={columns} dataSource={units} rowKey="id" /> },
+    { 
+      key: '2', label: 'Maintenance',
       children: (
         <List
           dataSource={maintenanceRecords}
@@ -138,8 +53,8 @@ const PropertyDetails = () => {
                 title={item.issue}
                 description={`Unit ${item.unit} - ${item.date}`}
               />
-              <div>
-                <Tag color={item.status === 'Completed' ? 'green' : 'orange'}>
+              <div className="text-right">
+                <Tag color={item.status === 'Completed' ? 'green' : item.status === 'Pending' ? 'red' : 'orange'}>
                   {item.status}
                 </Tag>
                 <div>KES {item.cost.toLocaleString()}</div>
@@ -153,6 +68,7 @@ const PropertyDetails = () => {
 
   return (
     <div className="p-6">
+      {/* Property Header */}
       <Card className="mb-6">
         <div className="flex justify-between items-center mb-6">
           <div>
@@ -162,47 +78,23 @@ const PropertyDetails = () => {
           <Button type="primary">Edit Property</Button>
         </div>
 
+        {/* Summary Stats */}
         <Row gutter={[16, 16]}>
-          <Col span={6}>
-            <Card>
-              <div className="text-center">
-                <HomeOutlined className="text-3xl text-blue-500 mb-2" />
-                <h3 className="text-lg font-medium">Total Units</h3>
-                <p className="text-2xl font-bold">20</p>
-              </div>
-            </Card>
-          </Col>
-          <Col span={6}>
-            <Card>
-              <div className="text-center">
-                <UserOutlined className="text-3xl text-green-500 mb-2" />
-                <h3 className="text-lg font-medium">Occupancy</h3>
-                <Progress type="circle" percent={90} width={80} />
-              </div>
-            </Card>
-          </Col>
-          <Col span={6}>
-            <Card>
-              <div className="text-center">
-                <DollarOutlined className="text-3xl text-yellow-500 mb-2" />
-                <h3 className="text-lg font-medium">Revenue</h3>
-                <p className="text-2xl font-bold">KES 450,000</p>
-              </div>
-            </Card>
-          </Col>
-          <Col span={6}>
-            <Card>
-              <div className="text-center">
-                <ToolOutlined className="text-3xl text-red-500 mb-2" />
-                <h3 className="text-lg font-medium">Maintenance</h3>
-                <p className="text-2xl font-bold">3</p>
-                <p className="text-sm text-gray-500">Pending requests</p>
-              </div>
-            </Card>
-          </Col>
+          {summaryStats.map((stat, index) => (
+            <Col span={6} key={index}>
+              <Card>
+                <div className="text-center">
+                  {stat.icon}
+                  <h3 className="text-lg font-medium">{stat.title}</h3>
+                  <p className="text-xl font-bold">{stat.value}</p>
+                </div>
+              </Card>
+            </Col>
+          ))}
         </Row>
       </Card>
 
+      {/* Tabs Section */}
       <Card>
         <Tabs items={items} />
       </Card>
